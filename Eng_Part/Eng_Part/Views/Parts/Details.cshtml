@@ -1,0 +1,75 @@
+﻿@model Eng_Part.Models.Database.ModulePart
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ModulePart</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PartName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartMetal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartMetal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartDimension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartDimension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartCDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartCDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartMDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartMDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PartID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

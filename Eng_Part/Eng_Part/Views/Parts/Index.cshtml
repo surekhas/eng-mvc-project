@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Eng_Part.Models.Database.ModulePart>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PartName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartMetal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartDimension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartCDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartMDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartMetal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartDimension)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartCDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartMDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PartID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PartID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PartID })
+        </td>
+    </tr>
+}
+
+</table>
